@@ -1,0 +1,22 @@
+#powered {
+    position: relative;
+    color: white;
+    display: flex;
+    height: 750px;
+    width: 1500px;
+}
+
+p {
+    display: flex;
+    align-items: flex-end;
+}
+
+#image {
+    position: absolute;
+    z-index: -1;
+}
+
+body {
+    background-image: url("https://picsum.photos/1500/750?blur");
+    background-size: cover;
+}
