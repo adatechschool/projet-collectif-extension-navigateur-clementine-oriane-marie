@@ -4,6 +4,9 @@ async function meteoApi() {
     const data = await response.json();
     const temperature = data.current_weather.temperature + "°C";
     const weatherCode = data.current_weather.weathercode;
-    console.log(temperature + " " + weatherCode)
+    console.log(temperature + " " + weatherCode);
+    return data;
 }
 console.log(meteoApi())
+
+

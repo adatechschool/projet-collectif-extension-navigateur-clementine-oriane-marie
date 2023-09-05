@@ -1,3 +1,8 @@
+body {
+    background-image: url("https://picsum.photos/1500/750?blur");
+    background-size: cover;
+}
+
 #powered {
     position: relative;
     color: white;
@@ -16,7 +21,12 @@ p {
     z-index: -1;
 }
 
-body {
-    background-image: url("https://picsum.photos/1500/750?blur");
-    background-size: cover;
+#timer{
+    position: flex;
+    right: 50px;
+    top: 50px;
+    background-color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 3px;
 }
