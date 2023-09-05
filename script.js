@@ -9,4 +9,18 @@ async function meteoApi() {
 }
 console.log(meteoApi())
 
+function horloge(){
+    let tt = new Date().toLocaleTimeString();
+    document.getElementById('timer').innerHTML = tt;
+    setTimeout(horloge, 1000);
+}
 
+horloge()
+// TO DO S'il est minuit, appeler la fonction date()
+function date(){
+    let date = new Date()
+    let today = new Intl.DateTimeFormat('fr-FR').format(date);
+    document.getElementById('date').innerHTML = today;
+    console.log(today);
+}
+date(); 
