@@ -61,9 +61,9 @@ function horloge(){
     document.getElementById('timer').innerHTML = tt;
     setTimeout(horloge, 1000);
     if (tt > "18:00" && tt < "23:59:59") {
-        document.getElementById('bonjour').innerHTML = "Bonsoir";
+        document.getElementById('bonjour').innerHTML = "Bonsoir,";
     } else {
-        document.getElementById('bonjour').innerHTML = "Bonjour";
+        document.getElementById('bonjour').innerHTML = "Bonjour,";
     }
     //S'il est minuit, appeler la fonction date() pour mettre à jour la date
     if (tt == "00:00:00"){
