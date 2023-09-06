@@ -1,14 +1,22 @@
+body {
+    background: url(https://picsum.photos/1500/750);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #lepetitvoile {
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     position: absolute;
     background-color: white;
-    top: 0;
-    left: 0;
     opacity: 0.4;
     z-index: -1;
 }
 
+<<<<<<< HEAD
 body {
     background: url(https://picsum.photos/1500/750);
     background-size: cover;
@@ -26,6 +34,19 @@ body {
     top : 40vw;
     left : 90vw;
     z-index: 6;
+=======
+#powered {
+    position: fixed;
+    color: white;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+p {
+    display: flex;
+    align-items: flex-end;
+>>>>>>> 8232d5c1c73eabed9c74bf4dcdaec7c94bb04ec2
 }
 
 #timer{
@@ -42,5 +63,10 @@ body {
     background-color: white;
     font-weight: bold;
     padding: 5px 10px;
+<<<<<<< HEAD
     z-index: 6;
 }
+=======
+    border: 3px;
+}
+>>>>>>> 8232d5c1c73eabed9c74bf4dcdaec7c94bb04ec2
