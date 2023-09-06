@@ -43,8 +43,15 @@ meteoApi().then(function (data){
         default:
         document.getElementById("iconMeteo").innerHTML = "<img src='banque_image/0.png'>";
     }
-
 })
+
+function date(){
+    let date = new Date()
+    let today = new Intl.DateTimeFormat('fr-FR').format(date);
+    document.getElementById('date').innerHTML = today;
+    console.log(today);
+}
+date();
 
 function horloge(){
     let tt = new Date().toLocaleTimeString([], {
@@ -53,14 +60,14 @@ function horloge(){
     });
     document.getElementById('timer').innerHTML = tt;
     setTimeout(horloge, 1000);
+    if (tt > "18:00" && tt < "23:59:59") {
+        document.getElementById('bonjour').innerHTML = "Bonsoir";
+    } else {
+        document.getElementById('bonjour').innerHTML = "Bonjour";
+    }
+    //S'il est minuit, appeler la fonction date() pour mettre à jour la date
+    if (tt == "00:00:00"){
+        date();
+    }
 }
 horloge()
-
-// TO DO S'il est minuit, appeler la fonction date()
-function date(){
-    let date = new Date()
-    let today = new Intl.DateTimeFormat('fr-FR').format(date);
-    document.getElementById('date').innerHTML = today;
-    console.log(today);
-}
-date();
