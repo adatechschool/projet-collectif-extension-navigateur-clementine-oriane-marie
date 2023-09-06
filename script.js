@@ -19,6 +19,7 @@ function horloge(){
 }
 
 horloge()
+
 // TO DO S'il est minuit, appeler la fonction date()
 function date(){
     let date = new Date()
