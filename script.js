@@ -10,7 +10,10 @@ async function meteoApi() {
 console.log(meteoApi())
 
 function horloge(){
-    let tt = new Date().toLocaleTimeString();
+    let tt = new Date().toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit'
+    });
     document.getElementById('timer').innerHTML = tt;
     setTimeout(horloge, 1000);
 }
