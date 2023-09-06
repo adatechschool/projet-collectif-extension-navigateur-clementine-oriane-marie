@@ -5,7 +5,7 @@ async function meteoApi() {
     const temperature = data.current_weather.temperature + "°C";
     const weatherCode = data.current_weather.weathercode;
     console.log(temperature + " " + weatherCode);
-    return data;
+    return weatherCode;
 }
 console.log(meteoApi())
 
@@ -17,7 +17,6 @@ function horloge(){
     document.getElementById('timer').innerHTML = tt;
     setTimeout(horloge, 1000);
 }
-
 horloge()
 
 // TO DO S'il est minuit, appeler la fonction date()
