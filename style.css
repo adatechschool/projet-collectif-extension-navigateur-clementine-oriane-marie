@@ -37,10 +37,16 @@ body {
 #deuxiemebloc{
     color: white;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    justify-content: space-around;
     flex: 1
+}
+
+#horloge{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 #powered {
@@ -54,16 +60,23 @@ body {
 
 #timer {
     color: white;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 10em;
+    font-weight:bolder;
     padding: 5px 10px;
     border: 3px;
 }
 
 #date {
     color: white;
-    font-size: 20px;
     font-weight: bold;
+    font-size: 20px;
     padding: 5px 10px;
     border: 3px;
+}
+
+
+
+img{
+    width: 20px;
+    height: auto;
 }
