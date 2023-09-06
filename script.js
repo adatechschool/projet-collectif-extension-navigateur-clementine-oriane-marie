@@ -7,74 +7,41 @@ async function meteoApi() {
 }
 
 meteoApi().then(function (data){
-    let temperature = data.current_weather.temperature + "°C";
     let weatherCode = data.current_weather.weathercode;
+
+    document.getElementById("temperature").innerHTML = data.current_weather.temperature + "°C";
 
     console.log(temperature);
     switch(weatherCode) {
         case 0:
-        //affiche l'image code 0
-        console.log("image code 0");
+        document.getElementById("iconMeteo").innerHTML = "<img src='banque_image/0.png'>";
         break;
         case 1,2:
-        //affiche l'image code 1,2
-        console.log("image code 1,2");
+        document.getElementById("iconMeteo").innerHTML = "<img src='banque_image/1_2.png'>";
         break;
         case 3:
-        //affiche l'image code 3
-        console.log("image code 3");
+        document.getElementById("iconMeteo").innerHTML = "<img src='banque_image/3.png'>";
         break;
         case 45,48:
-        //affiche l'image code 45,48
-        console.log("image code 45,48");
+        document.getElementById("iconMeteo").innerHTML = "<img src='banque_image/45_48.png'>";
         break;
         case 51,53,55:
-        //affiche l'image code 51,53,55
-        console.log("image code 51,53,55");
-        break;
-        case 56,57:
-        //affiche l'image code 56,57
-        console.log("image code 56,57");
+        document.getElementById("iconMeteo").innerHTML = "<img src='banque_image/51_53_55.png'>";
         break;
         case 61,63,65:
-        //affiche l'image code 61,63,65
-        console.log("image code 61,63,65");
-        break;
-        case 66,67:
-        //affiche l'image code 66,67
-        console.log("image code 66,67");
+        document.getElementById("iconMeteo").innerHTML = "<img src='banque_image/61_63_65.png'>";
         break;
         case 71,73,75:
-        //affiche l'image code 71,73,75
-        console.log("image code 71,73,75");
-        break;
-        case 0:
-        //affiche l'image code 0
-        console.log("image code 0")
-        break
-        case 77:
-        //affiche l'image code 77
-        console.log("image code 77");
+        document.getElementById("iconMeteo").innerHTML = "<img src='banque_image/71_72_73.png'>";
         break;
         case 80,81,82:
-        //affiche l'image code 80,81,82
-        console.log("image code 80,81,82");
-        break;
-        case 85,86:
-        //affiche l'image code 85,86
-        console.log("image code 85,86");
+        document.getElementById("iconMeteo").innerHTML = "<img src='banque_image/80_81_82.png'>";
         break;
         case 95:
-        //affiche l'image code 95
-        console.log("image code 95");
-        break;
-        case 96,99:
-        //affiche l'image code 96,99
-        console.log("image code 96,99");
+        document.getElementById("iconMeteo").innerHTML = "<img src='banque_image/95.png'>";
         break;
         default:
-            //afficher une image standard
-            console.log("image standard")
+        document.getElementById("iconMeteo").innerHTML = "<img src='banque_image/0.png'>";
     }
 
 })
