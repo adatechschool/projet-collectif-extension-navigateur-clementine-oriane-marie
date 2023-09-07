@@ -72,23 +72,23 @@ function horloge() {
 }
 horloge()
 
-function getFavicon(url) {
-    return `https://www.google.com/s2/favicons?domain=${url}`;
-}
+// function getFavicon(url) {
+//     return `https://www.google.com/s2/favicons?domain=${url}`;
+// }
 
-async function getHistory() {
-    const results = await new Promise((resolve) => {
-        chrome.history.search({ text: "" }, function (results) {
-            resolve(results);
-        });
-    });
-    results.sort((a, b) => (a.visitCount < b.visitCount ? 1 : -1));
-    console.log(results[0], results[1], results[2], results[3], results[4], results[6])
-    for(let i = 0; i<=5; i++){
-        document.getElementById("history").innerHTML += `<li> <img src = '${getFavicon(results[i].url)}'> </li>`
-    }
-    }
+// async function getHistory() {
+//     const results = await new Promise((resolve) => {
+//         chrome.history.search({ text: "" }, function (results) {
+//             resolve(results);
+//         });
+//     });
+//     results.sort((a, b) => (a.visitCount < b.visitCount ? 1 : -1));
+//     console.log(results[0], results[1], results[2], results[3], results[4], results[6])
+//     for(let i = 0; i<=5; i++){
+//         document.getElementById("history").innerHTML += `<li> <img src = '${getFavicon(results[i].url)}'> </li>`
+//     }
+//     }
 
-getHistory()
+// getHistory()
 
 
