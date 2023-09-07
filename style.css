@@ -39,6 +39,7 @@ body {
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
+    color: black;
 }
 
 .todo-app h2{
@@ -70,13 +71,6 @@ input{
     background: transparent;
     padding: 40px;
     font-weight: 16px;
-    font-size: 16px;
-    text-align: center;
-}
-
-input::placeholder{
-    padding-left: 40px;
-    text-align:center;
 }
 
 button{
