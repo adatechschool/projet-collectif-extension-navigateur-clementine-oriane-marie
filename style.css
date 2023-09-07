@@ -36,6 +36,7 @@ body {
     width: 100%;
     max-width: 300px;
     background: #fff;
+    opacity: 0.6;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
@@ -58,36 +59,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: #edeef0;
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
 }
 
-input{
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 40px;
-    font-weight: 16px;
-}
-
-button{
-    border: none;
-    outline: none;
-    padding: 16px 20px;
-    background: #ff5945;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 40px;
-}
-
 ul li {
     list-style: none;
     font-size: 17px;
-    padding: 12px 8px 12px 50px;
+    padding: 15px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
     position: relative;
@@ -118,7 +98,7 @@ ul li.checked::before{
 ul li span{
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 3px;
     width: 40px;
     height: 40px;
     font-size: 22px;
@@ -214,15 +194,14 @@ input[type="text"]:focus {
     /* margin-left: -1px; */
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-    color: #000000;
+    /* color: #000000; */
     opacity: 0.8;
     background-color: #000000;
+    color: #fff;
 }
 button:hover {
     cursor: pointer;
 }
-
-
 #ligne{
     display: flex;
     justify-content: center;
