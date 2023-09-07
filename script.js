@@ -71,3 +71,8 @@ function horloge(){
     }
 }
 horloge()
+
+
+function getFavicon(url) {
+    document.getElementById('favicon').innerHTML = `<img src="https://www.google.com/s2/favicons?domain=${url}" alt="favicon" />`;
+}
