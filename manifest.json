@@ -1,37 +1,42 @@
 {
-"manifest_version": 3,
-"name": "modify-page",
-"version": "1.0",
-"permissions": [
-    "activeTab",
-    "scripting",
-    "chrome://newtab/",
-    "chrome://search/",
-    "geolocation",
-    "storage",
-    "favicon"
-],
-"content_security_policy": {
-    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
-    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline'; child-src 'self';"
-},
-"chrome_url_overrides": {
-    "newtab": "index.html",
-    "homepage": "index.html"
-},
-"action": {
-    "default_icon": {
+    "manifest_version": 3,
+    "name": "modify-page",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "chrome://newtab/",
+        "chrome://search/",
+        "geolocation",
+        "storage",
+        "favicon",
+        "history"
+    ],
+
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
+        "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline'; child-src 'self';"
+    },
+
+    "chrome_url_overrides": {
+        "newtab": "index.html",
+        "homepage": "index.html"
+    },
+
+    "action": {
+        "default_icon": {
+            "16": "/banque_image/favicon_io/16.png",
+            "32": "/banque_image/favicon_io/32.png",
+            "192": "/banque_image/favicon_io/192.png",
+            "512": "/banque_image/favicon_io/512.png"
+        }
+    },
+
+    "icons": {
         "16": "/banque_image/favicon_io/16.png",
         "32": "/banque_image/favicon_io/32.png",
         "192": "/banque_image/favicon_io/192.png",
         "512": "/banque_image/favicon_io/512.png"
     }
-},
-"icons": {
-    "16": "/banque_image/favicon_io/16.png",
-    "32": "/banque_image/favicon_io/32.png",
-    "192": "/banque_image/favicon_io/192.png",
-    "512": "/banque_image/favicon_io/512.png"
-}
-}
 
+}
