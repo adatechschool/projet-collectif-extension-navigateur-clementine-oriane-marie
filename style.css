@@ -31,6 +31,88 @@ body {
     flex-direction: column;
     flex: 0.7
 }
+
+.todo-app{
+    width: 100%;
+    max-width: 300px;
+    background: #fff;
+    opacity: 0.6;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    color: black;
+}
+
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img{
+    width: 30;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 15px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(banque_image/radio.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+  color:   #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(banque_image/checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #edeef0;
+
+}
+
 #deuxiemebloc{
     color: white;
     display: flex;
@@ -88,11 +170,13 @@ body {
     font-size: 4em;
     border: 3px;
     text-align: center;
+    margin-bottom: 10px;
 }
 #meteo{
     display: flex;
     justify-content: space-around;
     font-size: 2em;
+    margin-top: 10px;
 }
 
 #logoMeteo{
@@ -108,12 +192,15 @@ body {
 input {
     border: none;
     outline: none;
+    color: #FFFFFF;
 }
 input[type="text"] {
+    color: #000000;
+    opacity: 0.6;
     padding: 15px 16px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-    /* margin-left: -15%; */
+    /* margin-top: -15%; */
 }
 input[type="text"]:focus {
     outline: none;
@@ -125,15 +212,14 @@ input[type="text"]:focus {
     /* margin-left: -1px; */
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
+    /* color: #000000; */
+    opacity: 0.8;
+    background-color: #000000;
     color: #fff;
-    opacity: 0.9;
-    background-color: #E0E0E0;
 }
 button:hover {
     cursor: pointer;
 }
-
-
 #ligne{
     display: flex;
     justify-content: center;
