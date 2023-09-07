@@ -73,4 +73,7 @@ function horloge(){
 horloge()
 
 
-
+// TO DO : ajouter la div favicon dans le html
+function getFavicon(url) {
+    document.getElementById('favicon').innerHTML = `<img src="https://www.google.com/s2/favicons?domain=${url}" alt="favicon" />`;
+}
