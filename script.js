@@ -71,29 +71,25 @@ function horloge() {
 }
 horloge()
 
-// function getFavicon(url) {
-//     return `https://www.google.com/s2/favicons?domain=${url}`;
-// }
-
-// async function getHistory() {
-//     const results = await new Promise((resolve) => {
-//         chrome.history.search({ text: "" }, function (results) {
-//             resolve(results);
-//         });
-//     });
-//     results.sort((a, b) => (a.visitCount < b.visitCount ? 1 : -1));
-//     console.log(results[0], results[1], results[2], results[3], results[4], results[6])
-//     for(let i = 0; i<=5; i++){
-//         document.getElementById("history").innerHTML += `<li> <img src = '${getFavicon(results[i].url)}'> </li>`
-//     }
-//     }
-
-// getHistory()
-
-
 function getFavicon(url) {
-    document.getElementById('favicon').innerHTML = `<img src="https://www.google.com/s2/favicons?domain=${url}" alt="favicon" />`;
+    return `https://www.google.com/s2/favicons?domain=${url}`;
 }
+
+async function getHistory() {
+    const results = await new Promise((resolve) => {
+        chrome.history.search({ text: "" }, function (results) {
+            resolve(results);
+        });
+    });
+    results.sort((a, b) => (a.visitCount < b.visitCount ? 1 : -1));
+    console.log(results[0], results[1], results[2], results[3], results[4], results[5]);
+    const historyList = document.getElementById("history");
+    for(let i = 0; i < 6 && i < results.length; i++) {
+        historyList.innerHTML += `<a href="${results[i].url}"> <img src='${getFavicon(results[i].url)}'> ${results[i].title} </a>`;
+    }
+}
+
+getHistory();
 
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");

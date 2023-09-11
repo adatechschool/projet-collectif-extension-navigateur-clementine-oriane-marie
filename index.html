@@ -1,68 +1,70 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-        <title>Bienvenue</title>
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Bienvenue</title>
+</head>
 
-    <body>
-        <div id="lepetitvoile">
-        </div>
-        <div id="corpus">
-            <div id="premierbloc">
-                    <div class="todo-app">
-                    <h2>To-Do List <img src="banque_image/list.png"></h2>
-                    <div class="row">
-                        <input type="text" id="input-box" placeholder="Ecrivez votre tâche">
-                        <!-- l'appel de fonction est bloqué par le navigateur ? -->
-                        <button class="button" id="Add">Ajouter</button>
-                    </div>
-                    <ul id="list-container">
-                    </ul>
-                    </div>
-                <!-- <ul id="history"> -->
-            </div>
-
-            <div id="deuxiemebloc">
-                <div id="horloge">
-                    <span id="timer"></span>
-                    <span id="date"></span>
+<body>
+    <div id="lepetitvoile">
+    </div>
+    <div id="corpus">
+        <div id="premierbloc">
+            <div class="todo-app">
+                <h2>To-Do List <img src="banque_image/list.png"></h2>
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Ecrivez votre tâche">
+                    <!-- l'appel de fonction est bloqué par le navigateur ? -->
+                    <button class="button" id="Add">Ajouter</button>
                 </div>
-                <div id="ligne">
-                    <div id="bonjour"></div>
-                    <form action="https://www.google.com/search" class="searchform" method="get" name="searchform"
-                        target="_blank">
-                        <input name="sitesearch" type="hidden" value="">
-                        <input autocomplete="on" class="form-control search" name="q" placeholder="Google Search"
-                            required="required" type="text">
-                        <button class="button" type="submit"><img id="google" src="banque_image/google.png" id="G"></button>
-                    </form>
-                    <div id="meteo">
-                        <span id="iconMeteo"></span>
-                        <span id="temperature"></span>
-                    </div>
-                </div>
-                <div class="sites">
-                    <a href="https://www.linkedin.com/"><img id=linkedin src="banque_image/sites_web/linkedin.png"></a>
-                    <a href="https://www.wikipedia.org/"><img id=wikipedia src="banque_image/sites_web/wikipedia.jpg"></a>
-                    <a href="https://www.netflix.com/browse"><img id=netflix src="banque_image/sites_web/netflix.png"></a>
-                    <a href="https://www.youtube.com/"><img id=youtube src="banque_image/sites_web/youtube.png"></a>
-                </div>
-            </div>
-            <div id="troisiemebloc">
-                <div></div>
-                <div id="powered">
-                    <span>Powered by Lorem Picsum</span>
-                </div>
+                <ul id="list-container">
+                </ul>
             </div>
         </div>
 
-
-
+        <div id="deuxiemebloc">
+            <div id="horloge">
+                <span id="timer"></span>
+                <span id="date"></span>
+            </div>
+            <div id="ligne">
+                <div id="bonjour"></div>
+                <form action="https://www.google.com/search" class="searchform" method="get" name="searchform"
+                    target="_blank">
+                    <input name="sitesearch" type="hidden" value="">
+                    <input autocomplete="on" class="form-control search" name="q" placeholder="Google Search"
+                        required="required" type="text">
+                    <button class="button" type="submit"><img id="google" src="banque_image/google.png" id="G"></button>
+                </form>
+                <div id="meteo">
+                    <span id="iconMeteo"></span>
+                    <span id="temperature"></span>
+                </div>
+            </div>
+            <div class="sites">
+                <a href="https://www.linkedin.com/"><img id=linkedin src="banque_image/sites_web/linkedin.png"></a>
+                <a href="https://www.wikipedia.org/"><img id=wikipedia src="banque_image/sites_web/wikipedia.jpg"></a>
+                <a href="https://www.netflix.com/browse"><img id=netflix src="banque_image/sites_web/netflix.png"></a>
+                <a href="https://www.youtube.com/"><img id=youtube src="banque_image/sites_web/youtube.png"></a>
+            </div>
         </div>
-    </body>
-    <script src="script.js"></script>
+        <div id="troisiemebloc">
+            <div>
+                <span id="history"><h2>Historique <img src="banque_image/history.png"></h2></span>
+            </div>
+            <div id="powered">
+                <span>Powered by Lorem Picsum</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+</body>
+<script src="script.js"></script>
+
 </html>
