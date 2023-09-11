@@ -61,7 +61,7 @@ function result(arrayOfUserTest) {
 }
 
 
-function gamePlay() {
+bouton.addEventListener("click" , function gamePlay() {
     let userTest = ""
     userTest = document.getElementById("givenColor").value
     let arrayOfUserTest = userTest.split(" ")
@@ -82,4 +82,4 @@ function gamePlay() {
     if (didIWin(userTest) == false && counter === 0) {
         document.getElementById("resultat").innerHTML = "PERDU ! Vous avez fait 12 tentatives mais vous n'avez pas trouvé la bonne réponse. "
     }
-}
+})
