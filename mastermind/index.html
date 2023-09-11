@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/vnd.icon" href="favicon.ico">
+    </head>
+    <body>
+        <h1>MASTERMIND !</h1>
+        <div id="gamePlay">
+            <form method="get" action="">
+                <label for="secretCode">
+                    <h2>Trouvez la combinaison de couleurs ! Veuillez entrer une combinaison de 4 couleurs de votre choix. Séparez les couleurs par un espace. Exemple : yellow red red green</h2>
+                    <br> 8 choix de couleurs possibles: 
+                    <ul>
+                        <li>red</li>
+                        <li>orange</li>
+                        <li>yellow</li>
+                        <li>brown</li>
+                        <li>blue</li>
+                        <li>pink</li>
+                        <li>purple</li>
+                        <li>green</li>
+                    </ul>
+                    <input type="string" id="givenColor"/>
+                    <div id="resultat"></div>
+                </label>
+                <br>
+            </form>
+        </div>
+        <div class="container">
+            <div id="bouton" type="submit" onclick="gamePlay()">
+                <p id="txt">Soumettre</p>
+            </div>  
+        </div>
+        <div id="try"><p><strong>Historique d'essais:</strong><br></p></div>
+    </body>
+    <script src="mastermind.js"></script>
+</html>

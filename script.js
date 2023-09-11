@@ -97,8 +97,9 @@ function getFavicon(url) {
 
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
+const bouton = document.getElementById("Add");
 
-function addTask(){
+bouton.addEventListener("click" , function addTask(){
     if(inputBox.value === ''){
         alert("You must write something!");
     } else{
@@ -111,15 +112,15 @@ function addTask(){
     }
     inputBox.value="";
     saveData();
-}
+}, false);
 
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
-        saveData();
+        // saveData();
     } else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
-        saveData();
+        // saveData();
     }
 }, false);
 
