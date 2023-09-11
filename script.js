@@ -99,7 +99,6 @@ const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 const bouton = document.getElementById("Add");
 
-// TEST EVENT LISTENER POUR RETIRER LA FONCTION DU HTML
 bouton.addEventListener("click" , function addTask(){
     if(inputBox.value === ''){
         alert("You must write something!");
