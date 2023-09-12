@@ -2,9 +2,14 @@ body {
     background: url(https://picsum.photos/1500/750);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
     font-family: 'Roboto', sans-serif;
 }
+
+a {
+    text-decoration: none;
+}
+
 #lepetitvoile {
     top: 0;
     left: 0;
@@ -18,27 +23,26 @@ body {
 #corpus {
     position: fixed;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
 }
 
 #premierbloc{
+    left: 0;
     color: white;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    flex: 1
+    flex: 1,
 }
 
 .todo-app{
-    width: 100%;
-    max-width: 300px;
     background: #fff;
     opacity: 0.8;
-    margin: 0px auto 20px;
     padding: 40px 30px 70px;
+    margin-right: 20px;
     border-radius: 10px;
     color: black;
 }
@@ -119,7 +123,8 @@ ul li span:hover{
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    flex: 1
+    flex: 1;
+    margin: 4rem
 }
 #horloge{
     display: flex;
