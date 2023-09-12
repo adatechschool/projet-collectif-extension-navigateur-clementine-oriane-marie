@@ -12,18 +12,16 @@
         "favicon",
         "history"
     ],
-
     "content_security_policy": {
         "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';",
         "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'wasm-unsafe-eval'; child-src 'self';"
-    },    
-
+    },
     "chrome_url_overrides": {
         "newtab": "index.html",
         "homepage": "index.html"
     },
-
     "action": {
+        "default_popup":"popup.html",
         "default_icon": {
             "16": "/banque_image/favicon_io/16.png",
             "32": "/banque_image/favicon_io/32.png",
@@ -31,7 +29,6 @@
             "512": "/banque_image/favicon_io/512.png"
         }
     },
-
     "icons": {
         "16": "/banque_image/favicon_io/16.png",
         "32": "/banque_image/favicon_io/32.png",
