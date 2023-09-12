@@ -76,25 +76,45 @@ bouton.addEventListener("click" , function gamePlay() {
     } else {
         let newResult = result(arrayOfUserTest)
         counter--
-        document.getElementById("resultat").innerHTML = "La combinaison testée comporte " + newResult[0] + " pions de couleur bien placés. Ainsi que " + newResult[1] + " pions de couleur à replacer. Retentez votre chance. Il vous reste " + counter + " essais."
+        document.getElementById("resultat").innerHTML = "La combinaison testée comporte " + newResult[0] + " pion(s) de couleur bien placé(s). Ainsi que " + newResult[1] + " pion(s) de couleur à replacer. Retentez votre chance. Il vous reste " + counter + " essais."
         document.getElementById("try").innerHTML += `${userTest}<br>`;
+        userTest = "";
     }
     if (didIWin(userTest) == false && counter === 0) {
         document.getElementById("resultat").innerHTML = "PERDU ! Vous avez fait 12 tentatives mais vous n'avez pas trouvé la bonne réponse. "
     }
+    allumage = true;
+    let givenColor = document.getElementById("givenColor");
+    givenColor.value = "";
 })
 
+let allumage = true;
 let compteur = 0;
 const choices = document.querySelectorAll(".choice");
 choices.forEach(choice => {
     choice.addEventListener('click', function addColor(event) {
-        compteur ++;
-        console.log("#choice" + compteur);
-        const element = document.querySelector("#choice" + compteur);
-        element.style.backgroundColor = event.srcElement.value;
-        let givenColor = document.getElementById("givenColor");
-        givenColor.value += event.srcElement.value + " ";
-        console.log(event.srcElement.value);
+        if (allumage == true) {
+            compteur ++;
+            console.log("#choice" + compteur);
+            const element = document.querySelector("#choice" + compteur);
+            element.style.backgroundColor = event.srcElement.value;
+            let givenColor = document.getElementById("givenColor");
+            givenColor.value += event.srcElement.value + " ";
+            console.log(event.srcElement.value);
+        }
+        if (compteur == 4) {
+            allumage = false;
+            compteur = 0; 
+        }
     });
-  });
+});
+
+const remove = document.querySelector("#remove")
+remove.addEventListener('click', function removeColor() {
+const element = document.querySelector("#choice" + compteur);
+element.style.backgroundColor = event.srcElement.value;
+
+element.style.backgroundColor = "none";
+
+});
 
