@@ -83,3 +83,18 @@ bouton.addEventListener("click" , function gamePlay() {
         document.getElementById("resultat").innerHTML = "PERDU ! Vous avez fait 12 tentatives mais vous n'avez pas trouvé la bonne réponse. "
     }
 })
+
+let compteur = 0;
+const choices = document.querySelectorAll(".choice");
+choices.forEach(choice => {
+    choice.addEventListener('click', function addColor(event) {
+        compteur ++;
+        console.log("#choice" + compteur);
+        const element = document.querySelector("#choice" + compteur);
+        element.style.backgroundColor = event.srcElement.value;
+        let givenColor = document.getElementById("givenColor");
+        givenColor.value += event.srcElement.value + " ";
+        console.log(event.srcElement.value);
+    });
+  });
+
