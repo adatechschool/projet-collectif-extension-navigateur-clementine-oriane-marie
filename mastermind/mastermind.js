@@ -78,6 +78,8 @@ bouton.addEventListener("click" , function gamePlay() {
         counter--
         document.getElementById("resultat").innerHTML = "La combinaison testée comporte " + newResult[0] + " pion(s) de couleur bien placé(s). Ainsi que " + newResult[1] + " pion(s) de couleur à replacer. Retentez votre chance. Il vous reste " + counter + " essais."
         document.getElementById("try").innerHTML += `${userTest}<br>`;
+        document.getElementById("try").innerHTML += `<div class='historique' id=${counter}></div>`
+        
         userTest = "";
     }
     if (didIWin(userTest) == false && counter === 0) {
@@ -86,6 +88,22 @@ bouton.addEventListener("click" , function gamePlay() {
     allumage = true;
     let givenColor = document.getElementById("givenColor");
     givenColor.value = "";
+    const element1 = document.querySelector("#choice1");
+    element1.style.backgroundColor = event.srcElement.value;
+    element1.style = "backgroundColor: none";
+
+
+    const element2 = document.querySelector("#choice2");
+    element2.style.backgroundColor = event.srcElement.value;
+    element2.style = "backgroundColor: none";
+    
+    const element3 = document.querySelector("#choice3");
+    element3.style.backgroundColor = event.srcElement.value;
+    element3.style = "backgroundColor: none";
+
+    const element4 = document.querySelector("#choice4");
+    element4.style.backgroundColor = event.srcElement.value;
+    element4.style = "backgroundColor: none";
 })
 
 let allumage = true;
@@ -100,7 +118,7 @@ choices.forEach(choice => {
             element.style.backgroundColor = event.srcElement.value;
             let givenColor = document.getElementById("givenColor");
             givenColor.value += event.srcElement.value + " ";
-            console.log(event.srcElement.value);
+            console.log(event.srcElement.value);            
         }
         if (compteur == 4) {
             allumage = false;
@@ -111,10 +129,26 @@ choices.forEach(choice => {
 
 const remove = document.querySelector("#remove")
 remove.addEventListener('click', function removeColor() {
-const element = document.querySelector("#choice" + compteur);
-element.style.backgroundColor = event.srcElement.value;
+    compteur = 0;
+    const element1 = document.querySelector("#choice1");
+    element1.style.backgroundColor = event.srcElement.value;
+    element1.style = "backgroundColor: none";
 
-element.style.backgroundColor = "none";
 
+    const element2 = document.querySelector("#choice2");
+    element2.style.backgroundColor = event.srcElement.value;
+    element2.style = "backgroundColor: none";
+    
+    const element3 = document.querySelector("#choice3");
+    element3.style.backgroundColor = event.srcElement.value;
+    element3.style = "backgroundColor: none";
+
+    const element4 = document.querySelector("#choice4");
+    element4.style.backgroundColor = event.srcElement.value;
+    element4.style = "backgroundColor: none";
+
+    let givenColor = document.getElementById("givenColor");
+    givenColor.value = "";
+    allumage = true;
 });
 
