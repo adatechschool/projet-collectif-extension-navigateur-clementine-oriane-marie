@@ -15,16 +15,16 @@
 <body>
     <div id="premierbloc">
         8 choix de couleurs possibles :
-        <ul>
-            <li>red</li>
-            <li>orange</li>
-            <li>yellow</li>
-            <li>brown</li>
-            <li>blue</li>
-            <li>pink</li>
-            <li>purple</li>
-            <li>green</li>
-        </ul>
+        <div id="colorList">
+            <button id="yellow" class="choice" value="yellow"></button>
+            <button id="red" class="choice" value="red"></button>
+            <button id="orange" class="choice" value="orange"></button>
+            <button id="brown" class="choice" value="brown"></button>
+            <button id="blue" class="choice" value="blue"></button>
+            <button id="pink" class="choice" value="pink"></button>
+            <button id="purple" class="choice" value="purple"></button>
+            <button id="green" class="choice" value="green"></button>
+        </div>
     </div>
     <div id="deuxiemebloc">
         <h1>MASTERMIND !</h1>
@@ -34,6 +34,12 @@
                 <h2>Trouvez la combinaison de couleurs ! Veuillez entrer une combinaison de 4 couleurs de votre
                     choix.
                     Séparez les couleurs par un espace. Exemple : red blue red blue</h2>
+                    <div id="choiceBtn">
+                            <div id="choice1"></div>
+                            <div id="choice2"></div>
+                            <div id="choice3"></div>
+                            <div id="choice4"></div>
+                    </div>
                     <input type="string" id="givenColor" />
                 <div id="resultat"></div>
                 <br>

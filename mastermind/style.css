@@ -16,11 +16,89 @@ body {
 #premierbloc{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 20px;
     flex: 0.5;
     background-color: rgba(0,0,0,.8);
     height: fit-content;
 }
+
+#colorList{
+    display: flex;
+    flex-direction: column;
+
+}
+
+button{
+    cursor: pointer;
+    border: none;
+}
+
+#red{
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+#orange{
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+#yellow{
+    background-color: yellow;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+#brown{
+    background-color: brown;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+#blue{
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+#pink{
+    background-color: pink;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+#purple{
+    background-color: purple;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+#green{
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
 #deuxiemebloc{
     display: flex;
     flex-direction: column;
@@ -52,6 +130,35 @@ h1 {
 
 h2 {
     text-align: center;
+}
+
+#choiceBtn{
+    display: flex;
+    flex-direction: row;
+}
+
+#choice1{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#choice2{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#choice3{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#choice4{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 }
 
 #txt {
