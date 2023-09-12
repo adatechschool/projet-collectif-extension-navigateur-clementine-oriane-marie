@@ -29,6 +29,7 @@ function isValidColor(userColor) {
 
 function didIWin(match) {
     let result = winningMatch.toString()
+    console.log(result.replaceAll(","," "))
     return match === result.replaceAll(",", " ")
 }
 
@@ -70,31 +71,83 @@ bouton.addEventListener("click" , function gamePlay() {
             document.getElementById("resultat").innerHTML = "La combinaison fourni ne respecte pas les règles du jeu. Recommencez."
         }
     }
-    if (didIWin(userTest) == true) {
+    let newResult = result(arrayOfUserTest)
+    if (newResult[0] == 4) {
         counter--
-        document.getElementById("resultat").innerHTML = "Félicitation, vous avez gagnez ! Vous avez fait " + (12 - counter) + " tentatives"
+        document.getElementById("resultat").innerHTML = "Félicitation, vous avez gagnez ! Vous avez fait " + (12 - counter) + " tentatives. <br> Appuyez sur f5 pour rejouer !"
     } else {
-        let newResult = result(arrayOfUserTest)
         counter--
-        document.getElementById("resultat").innerHTML = "La combinaison testée comporte " + newResult[0] + " pions de couleur bien placés. Ainsi que " + newResult[1] + " pions de couleur à replacer. Retentez votre chance. Il vous reste " + counter + " essais."
+        document.getElementById("resultat").innerHTML = "La combinaison testée comporte " + newResult[0] + " pion(s) de couleur bien placé(s). Ainsi que " + newResult[1] + " pion(s) de couleur à replacer. Retentez votre chance. Il vous reste " + counter + " essais."
         document.getElementById("try").innerHTML += `${userTest}<br>`;
+        document.getElementById("try").innerHTML += `<div class='historique' id=${counter}></div>`
+        
+        userTest = "";
     }
     if (didIWin(userTest) == false && counter === 0) {
         document.getElementById("resultat").innerHTML = "PERDU ! Vous avez fait 12 tentatives mais vous n'avez pas trouvé la bonne réponse. "
     }
+    allumage = true;
+    let givenColor = document.getElementById("givenColor");
+    givenColor.value = "";
+    const element1 = document.querySelector("#choice1");
+    element1.style.backgroundColor = event.srcElement.value;
+    element1.style = "backgroundColor: none";
+
+
+    const element2 = document.querySelector("#choice2");
+    element2.style.backgroundColor = event.srcElement.value;
+    element2.style = "backgroundColor: none";
+    
+    const element3 = document.querySelector("#choice3");
+    element3.style.backgroundColor = event.srcElement.value;
+    element3.style = "backgroundColor: none";
+
+    const element4 = document.querySelector("#choice4");
+    element4.style.backgroundColor = event.srcElement.value;
+    element4.style = "backgroundColor: none";
 })
 
+let allumage = true;
 let compteur = 0;
 const choices = document.querySelectorAll(".choice");
 choices.forEach(choice => {
     choice.addEventListener('click', function addColor(event) {
-        compteur ++;
-        console.log("#choice" + compteur);
-        const element = document.querySelector("#choice" + compteur);
-        element.style.backgroundColor = event.srcElement.value;
-        let givenColor = document.getElementById("givenColor");
-        givenColor.value += event.srcElement.value + " ";
-        console.log(event.srcElement.value);
+        if (allumage == true) {
+            compteur ++;
+            const element = document.querySelector("#choice" + compteur);
+            element.style.backgroundColor = event.srcElement.value;
+            let givenColor = document.getElementById("givenColor");
+            givenColor.value += event.srcElement.value + " ";
+        }
+        if (compteur == 4) {
+            allumage = false;
+            compteur = 0; 
+        }
     });
-  });
+});
+
+const remove = document.querySelector("#remove")
+remove.addEventListener('click', function removeColor() {
+    compteur = 0;
+    const element1 = document.querySelector("#choice1");
+    element1.style.backgroundColor = event.srcElement.value;
+    element1.style = "backgroundColor: none";
+
+
+    const element2 = document.querySelector("#choice2");
+    element2.style.backgroundColor = event.srcElement.value;
+    element2.style = "backgroundColor: none";
+    
+    const element3 = document.querySelector("#choice3");
+    element3.style.backgroundColor = event.srcElement.value;
+    element3.style = "backgroundColor: none";
+
+    const element4 = document.querySelector("#choice4");
+    element4.style.backgroundColor = event.srcElement.value;
+    element4.style = "backgroundColor: none";
+
+    let givenColor = document.getElementById("givenColor");
+    givenColor.value = "";
+    allumage = true;
+});
 

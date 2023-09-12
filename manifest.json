@@ -4,6 +4,7 @@
     "version": "1.0",
     "permissions": [
         "activeTab",
+        "tabs",
         "scripting",
         "chrome://newtab/",
         "chrome://search/",
@@ -21,7 +22,7 @@
         "homepage": "index.html"
     },
     "action": {
-        "default_popup":"popup.html",
+        "default_popup": "popup.html",
         "default_icon": {
             "16": "/banque_image/favicon_io/16.png",
             "32": "/banque_image/favicon_io/32.png",
