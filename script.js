@@ -83,38 +83,6 @@ getLocation();
 //     document.getElementById("temperature").innerHTML = data.current_weather.temperature + "°C";
   
 //     console.log(temperature);
-//     switch (weatherCode) {
-//         case 0:
-//             document.getElementById("iconMeteo").innerHTML = "<img id='logoMeteo' src='banque_image/0.png'>";
-//             break;
-//         case 1, 2:
-//             document.getElementById("iconMeteo").innerHTML = "<img id='logoMeteo' src='banque_image/1_2.png'>";
-//             break;
-//         case 3:
-//             document.getElementById("iconMeteo").innerHTML = "<img id='logoMeteo' src='banque_image/3.png'>";
-//             break;
-//         case 45, 48:
-//             document.getElementById("iconMeteo").innerHTML = "<img id='logoMeteo' src='banque_image/45_48.png'>";
-//             break;
-//         case 51, 53, 55:
-//             document.getElementById("iconMeteo").innerHTML = "<img id='logoMeteo' src='banque_image/51_53_55.png'>";
-//             break;
-//         case 61, 63, 65:
-//             document.getElementById("iconMeteo").innerHTML = "<img id='logoMeteo' src='banque_image/61_63_65.png'>";
-//             break;
-//         case 71, 73, 75:
-//             document.getElementById("iconMeteo").innerHTML = "<img id='logoMeteo' src='banque_image/71_72_73.png'>";
-//             break;
-//         case 80, 81, 82:
-//             document.getElementById("iconMeteo").innerHTML = "<img id='logoMeteo' src='banque_image/80_81_82.png'>";
-//             break;
-//         case 95:
-//             document.getElementById("iconMeteo").innerHTML = "<img id='logoMeteo' src='banque_image/95.png'>";
-//             break;
-//         default:
-//             document.getElementById("iconMeteo").innerHTML = "<img id='logoMeteo' src='banque_image/0.png'>";
-//     }
-// })
 
 function date() {
     let date = new Date()
@@ -136,7 +104,7 @@ function horloge() {
         document.getElementById('bonjour').innerHTML = "Bonjour,";
     }
     //S'il est minuit, appeler la fonction date() pour mettre à jour la date
-    if (tt == "00:00") {
+    if (tt == "0:00" || tt == "00:00" || tt == "00:00:00" || tt == "0:00:00" || tt > "0:00") {
         date();
     }
 }
