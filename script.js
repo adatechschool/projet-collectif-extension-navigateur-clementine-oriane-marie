@@ -30,7 +30,6 @@ function fetchMeteoApi(lat, lon){
         .then((data) => {
             const weatherCode = data.current_weather.weathercode;
             document.getElementById("temperature").innerHTML = data.current_weather.temperature + "°C";
-            setTimeout(fetchMeteoApi, 1000);
             console.log(temperature);
             
             switch (weatherCode) {
