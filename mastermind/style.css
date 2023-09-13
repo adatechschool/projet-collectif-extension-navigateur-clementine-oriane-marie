@@ -174,7 +174,7 @@ h2 {
     0 0 34px rgba(30, 242, 51, 0.78);
 }
 
-#bouton {
+.bouton {
     background-color: rgb(39, 39, 39);
     border: solid 4px rgb(255, 255, 255);
     border-radius: 10px;
@@ -250,4 +250,9 @@ form{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+#remove {
+    flex-direction: row;
+    margin-left: 85px;
 }

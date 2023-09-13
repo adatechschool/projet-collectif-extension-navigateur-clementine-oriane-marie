@@ -3,24 +3,24 @@ let longitude = 0;
 
 function getLocation() {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (_position) => {
-            latitude = _position.coords.latitude;
-            longitude = _position.coords.longitude;
-            fetchMeteoApi(latitude, longitude);
-            console.log(latitude);
-            console.log(longitude);
-        },
-        () => {
-          alert("The system didn't approve location");
-        }
-      );
+        navigator.geolocation.getCurrentPosition(
+            (_position) => {
+                latitude = _position.coords.latitude;
+                longitude = _position.coords.longitude;
+                fetchMeteoApi(latitude, longitude);
+                console.log(latitude);
+                console.log(longitude);
+            },
+            () => {
+                alert("The system didn't approve location");
+            }
+        );
     } else {
-      alert("The system didn't approve location");
+        alert("The system didn't approve location");
     }
 }
 
-function fetchMeteoApi(lat, lon){
+function fetchMeteoApi(lat, lon) {
     fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,rain&current_weather=true`)
 
         .then((res) => {
@@ -30,7 +30,7 @@ function fetchMeteoApi(lat, lon){
             const weatherCode = data.current_weather.weathercode;
             document.getElementById("temperature").innerHTML = data.current_weather.temperature + "°C";
             console.log(temperature);
-            
+
             switch (weatherCode) {
                 case 0:
                     document.getElementById("iconMeteo").innerHTML = "<img id='logoMeteo' src='banque_image/0.png'>";
@@ -65,7 +65,7 @@ function fetchMeteoApi(lat, lon){
         })
         .catch((e) => {
             console.log(e);
-        });      
+        });
 }
 getLocation();
 
@@ -108,7 +108,7 @@ async function getHistory() {
     results.sort((a, b) => (a.visitCount < b.visitCount ? 1 : -1));
     console.log(results[0], results[1], results[2], results[3], results[4], results[5]);
     const historyList = document.getElementById("history");
-    for(let i = 0; i < 6 && i < results.length; i++) {
+    for (let i = 0; i < 6 && i < results.length; i++) {
         historyList.innerHTML += `<a href="${results[i].url}"> <img src='${getFavicon(results[i].url)}'> ${results[i].title} </a>`;
     }
 }
@@ -118,10 +118,10 @@ const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 const bouton = document.getElementById("Add");
 
-bouton.addEventListener("click" , function addTask(){
-    if(inputBox.value === ''){
+bouton.addEventListener("click", function addTask() {
+    if (inputBox.value === '') {
         alert("You must write something!");
-    } else{
+    } else {
         let li = document.createElement("li");
         li.innerHTML = inputBox.value;
         listContainer.appendChild(li);
@@ -129,27 +129,34 @@ bouton.addEventListener("click" , function addTask(){
         span.innerHTML = "\u00d7";
         li.appendChild(span);
     }
-    inputBox.value="";
+    inputBox.value = "";
     saveData();
 }, false);
 
-listContainer.addEventListener("click", function(e){
-    if(e.target.tagName === "LI"){
+listContainer.addEventListener("click", function (e) {
+    if (e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
-    } else if(e.target.tagName === "SPAN"){
+    } else if (e.target.tagName === "SPAN") {
         e.target.parentElement.remove();
         saveData();
     }
 }, false);
 
-function saveData(){
+function saveData() {
     localStorage.setItem("data", listContainer.innerHTML)
 }
-function showTask(){
+function showTask() {
     listContainer.innerHTML = localStorage.getItem("data");
 }
 showTask();
+
+
+styleForm.addEventListener("click", function colorChoice() {
+    const textColor = document.getElementById('textColor').value;
+    document.getElementById("deuxiemebloc").style.color = textColor
+}, false)
+
 
 
 
