@@ -151,11 +151,23 @@ function showTask() {
 }
 showTask();
 
+function saveColor() {
+    const bloc2 = document.getElementById("deuxiemebloc");
+    localStorage.setItem("color", bloc2.style.color)
+}
+function showColor() {
+    const bloc2 = document.getElementById("deuxiemebloc");
+    bloc2.style.color = localStorage.getItem("color");
+}
+
 
 style.addEventListener("click", function colorChoice() {
     const textColor = document.getElementById('textColor').value;
-    document.getElementById("deuxiemebloc").style.color = textColor
+    document.getElementById("deuxiemebloc").style.color = textColor;
+    saveColor();
 }, false)
+
+showColor();
 
 
 
