@@ -152,7 +152,7 @@ function showTask() {
 showTask();
 
 
-styleForm.addEventListener("click", function colorChoice() {
+style.addEventListener("click", function colorChoice() {
     const textColor = document.getElementById('textColor').value;
     document.getElementById("deuxiemebloc").style.color = textColor
 }, false)

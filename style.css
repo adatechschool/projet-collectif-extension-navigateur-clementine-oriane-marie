@@ -2,7 +2,7 @@ body {
     background: url(https://picsum.photos/1500/750);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -24,22 +24,24 @@ a {
 
 #corpus {
     position: fixed;
+    top:0;
+    left:0;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 100%;
 }
 
-#premierbloc{
+#premierbloc {
     left: 0;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-between;
     flex-direction: column;
+    margin:20px;
     flex: 1,
 }
 
-.todo-app{
+.todo-app {
     background: #fff;
     opacity: 0.8;
     padding: 40px 30px 70px;
@@ -48,19 +50,19 @@ a {
     color: black;
 }
 
-.todo-app h2{
+.todo-app h2 {
     color: #000000;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.todo-app h2 img{
+.todo-app h2 img {
     width: 30px;
     margin-left: 10px;
 }
 
-.row{
+.row {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -72,13 +74,12 @@ a {
 ul li {
     list-style: none;
     font-size: 17px;
-    padding: 15px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
     position: relative;
 }
 
-ul li::before{
+ul li::before {
     content: '';
     position: absolute;
     height: 28px;
@@ -91,16 +92,16 @@ ul li::before{
     left: 8px;
 }
 
-ul li.checked{
-  color:   #555;
-  text-decoration: line-through;
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
 }
 
-ul li.checked::before{
+ul li.checked::before {
     background-image: url(banque_image/checked.png);
 }
 
-ul li span{
+ul li span {
     position: absolute;
     right: 0;
     top: 3px;
@@ -113,11 +114,11 @@ ul li span{
     border-radius: 50%;
 }
 
-ul li span:hover{
+ul li span:hover {
     background: #edeef0;
 }
 
-#deuxiemebloc{
+#deuxiemebloc {
     color: white;
     display: flex;
     align-items: center;
@@ -127,14 +128,14 @@ ul li span:hover{
     margin: 4rem
 }
 
-#horloge{
+#horloge {
     display: flex;
     align-items: center;
     flex-direction: column;
     flex: 0.7
 }
 
-#troisiemebloc{
+#troisiemebloc {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -147,13 +148,13 @@ ul li span:hover{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding:1vw;
-    flex:1.3
+    padding: 1vw;
+    flex: 1.3
 }
 
 #timer {
     font-size: 8em;
-    font-weight:bolder;
+    font-weight: bolder;
     padding: 5px 10px;
     border: 3px;
 }
@@ -165,12 +166,12 @@ ul li span:hover{
     border: 3px;
 }
 
-#google{
+#google {
     width: 1.5em;
     height: auto;
 }
 
-#bonjour{
+#bonjour {
     font-weight: bold;
     font-size: 4em;
     border: 3px;
@@ -178,14 +179,14 @@ ul li span:hover{
     margin-bottom: 10px;
 }
 
-#meteo{
+#meteo {
     display: flex;
     justify-content: center;
     font-size: 2em;
     margin-top: 10px;
 }
 
-#logoMeteo{
+#logoMeteo {
     width: 1.5em;
     height: auto;
 }
@@ -216,7 +217,7 @@ input[type="text"]:focus {
     opacity: 1;
 }
 
-.button{
+.button {
     padding: 11px 16px;
     border: none;
     border-bottom-right-radius: 10px;
@@ -230,23 +231,23 @@ button:hover {
     cursor: pointer;
 }
 
-#ligne{
+#ligne {
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex: 1.3
 }
 
-.sites img{
+.sites img {
     width: 5em;
     border-radius: 10px;
     margin: 1vw
 }
 
-.sites{
+.sites {
     display: flex;
     align-items: center;
-    flex:0.7
+    flex: 0.7
 }
 
 #input-box {
@@ -257,33 +258,68 @@ button:hover {
     opacity: 1;
 }
 
-#history{
+#history {
     background: #fff;
     opacity: 0.8;
-    margin: 0px 10px 20px;
-    padding: 40px 30px 10px;
+    margin: 20px 10px 20px;
+    padding: 40px 30px 20px;
     border-radius: 10px;
-    color: black; 
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-#history img{
+#history img {
     width: 16px;
     height: 16px;
     margin-right: 10px;
 }
 
-#history h2{
+#history h2 {
     color: #000000;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-#history h2 img{
+#history h2 img {
     width: 30px;
     height: auto;
     margin-left: 10px;
+}
+
+#colorChoice {
+    background: #fff;
+    opacity: 0.8;
+    margin: 0px 10px 20px;
+    padding: 40px 30px 10px;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#styleForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#style {
+    border: none;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    opacity: 0.8;
+    background-color: #000000;
+    color: #fff;
+}
+
+#textColor{
+    transition: 0.1s;
+    opacity: 0.8;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
