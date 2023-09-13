@@ -77,14 +77,37 @@ bouton.addEventListener("click" , function gamePlay() {
         document.getElementById("resultat").innerHTML = "Félicitation, vous avez gagnez ! Vous avez fait " + (12 - counter) + " tentatives. <br> Appuyez sur f5 pour rejouer !"
     } else {
         counter--
-        document.getElementById("resultat").innerHTML = "La combinaison testée comporte " + newResult[0] + " pions de couleur bien placés. Ainsi que " + newResult[1] + " pions de couleur à replacer. Retentez votre chance. Il vous reste " + counter + " essais."
+        document.getElementById("resultat").innerHTML = "La combinaison testée comporte " + newResult[0] + " pion(s) de couleur bien placé(s). Ainsi que " + newResult[1] + " pion(s) de couleur à replacer. Retentez votre chance. Il vous reste " + counter + " essais."
         document.getElementById("try").innerHTML += `${userTest}<br>`;
+        document.getElementById("try").innerHTML += `<div class='historique' id=${counter}></div>`
+        
+        userTest = "";
     }
     if (didIWin(userTest) == false && counter === 0) {
         document.getElementById("resultat").innerHTML = "PERDU ! Vous avez fait 12 tentatives mais vous n'avez pas trouvé la bonne réponse. "
     }
+    allumage = true;
+    let givenColor = document.getElementById("givenColor");
+    givenColor.value = "";
+    const element1 = document.querySelector("#choice1");
+    element1.style.backgroundColor = event.srcElement.value;
+    element1.style = "backgroundColor: none";
+
+
+    const element2 = document.querySelector("#choice2");
+    element2.style.backgroundColor = event.srcElement.value;
+    element2.style = "backgroundColor: none";
+    
+    const element3 = document.querySelector("#choice3");
+    element3.style.backgroundColor = event.srcElement.value;
+    element3.style = "backgroundColor: none";
+
+    const element4 = document.querySelector("#choice4");
+    element4.style.backgroundColor = event.srcElement.value;
+    element4.style = "backgroundColor: none";
 })
 
+let allumage = true;
 let compteur = 0;
 const choices = document.querySelectorAll(".choice");
 choices.forEach(choice => {
@@ -101,5 +124,30 @@ choices.forEach(choice => {
             compteur = 0; 
         }
     });
-  });
+});
+
+const remove = document.querySelector("#remove")
+remove.addEventListener('click', function removeColor() {
+    compteur = 0;
+    const element1 = document.querySelector("#choice1");
+    element1.style.backgroundColor = event.srcElement.value;
+    element1.style = "backgroundColor: none";
+
+
+    const element2 = document.querySelector("#choice2");
+    element2.style.backgroundColor = event.srcElement.value;
+    element2.style = "backgroundColor: none";
+    
+    const element3 = document.querySelector("#choice3");
+    element3.style.backgroundColor = event.srcElement.value;
+    element3.style = "backgroundColor: none";
+
+    const element4 = document.querySelector("#choice4");
+    element4.style.backgroundColor = event.srcElement.value;
+    element4.style = "backgroundColor: none";
+
+    let givenColor = document.getElementById("givenColor");
+    givenColor.value = "";
+    allumage = true;
+});
 
