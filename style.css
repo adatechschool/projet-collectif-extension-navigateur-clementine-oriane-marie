@@ -24,8 +24,6 @@ a {
 
 #corpus {
     position: fixed;
-    top:0;
-    left:0;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -74,6 +72,7 @@ a {
 ul li {
     list-style: none;
     font-size: 17px;
+    padding: 15px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
     position: relative;
