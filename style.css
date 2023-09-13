@@ -6,7 +6,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-a {
+#history a {
     text-decoration: none;
     color: black;
 }
@@ -24,8 +24,8 @@ a {
 
 #corpus {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -37,8 +37,8 @@ a {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin:20px;
-    flex: 1,
+    margin: 20px;
+    width: 25%;
 }
 
 .todo-app {
@@ -73,7 +73,7 @@ a {
 
 ul li {
     list-style: none;
-    font-size: 17px;
+    font-size: 1rem;
     user-select: none;
     cursor: pointer;
     position: relative;
@@ -107,7 +107,7 @@ ul li span {
     top: 3px;
     width: 40px;
     height: 40px;
-    font-size: 22px;
+    font-size: 1.5rem;
     color: #555;
     line-height: 40px;
     text-align: center;
@@ -124,7 +124,7 @@ ul li span:hover {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1.5;
+    width: 55%;
     margin: 4rem
 }
 
@@ -139,7 +139,7 @@ ul li span:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1;
+    width: 25%;
 }
 
 
@@ -153,7 +153,7 @@ ul li span:hover {
 }
 
 #timer {
-    font-size: 8em;
+    font-size: 6rem;
     font-weight: bolder;
     padding: 5px 10px;
     border: 3px;
@@ -161,7 +161,7 @@ ul li span:hover {
 
 #date {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1rem;
     padding: 5px 10px;
     border: 3px;
 }
@@ -173,7 +173,7 @@ ul li span:hover {
 
 #bonjour {
     font-weight: bold;
-    font-size: 4em;
+    font-size: 2rem;
     border: 3px;
     text-align: center;
     margin-bottom: 10px;
@@ -182,7 +182,7 @@ ul li span:hover {
 #meteo {
     display: flex;
     justify-content: center;
-    font-size: 2em;
+    font-size: 1rem;
     margin-top: 10px;
 }
 
@@ -283,17 +283,16 @@ button:hover {
     margin-bottom: 20px;
 }
 
-#history h2 img {
+/* #history h2 img {
     width: 30px;
     height: auto;
     margin-left: 10px;
-}
+} */
 
 #colorChoice {
     background: #fff;
+    padding-left: 10px;
     opacity: 0.8;
-    margin: 0px 10px 20px;
-    padding: 40px 30px 10px;
     border-radius: 10px;
     color: black;
     display: flex;
@@ -317,9 +316,25 @@ button:hover {
     color: #fff;
 }
 
-#textColor{
+#textColor {
     transition: 0.1s;
     opacity: 0.8;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+}
+
+#googlelinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    white-space: 20px;
+    margin: 20px;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: white
 }

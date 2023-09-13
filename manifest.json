@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "modify-page",
+    "name": "Welcoming Page",
     "version": "1.0",
     "permissions": [
         "activeTab",
