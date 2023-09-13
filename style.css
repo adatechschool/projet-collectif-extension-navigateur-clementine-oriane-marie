@@ -32,7 +32,6 @@ a {
 
 #premierbloc{
     left: 0;
-    color: white;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -153,7 +152,6 @@ ul li span:hover{
 }
 
 #timer {
-    color: white;
     font-size: 8em;
     font-weight:bolder;
     padding: 5px 10px;
@@ -161,7 +159,6 @@ ul li span:hover{
 }
 
 #date {
-    color: white;
     font-weight: bold;
     font-size: 1.5em;
     padding: 5px 10px;
@@ -174,7 +171,6 @@ ul li span:hover{
 }
 
 #bonjour{
-    color: white;
     font-weight: bold;
     font-size: 4em;
     border: 3px;
