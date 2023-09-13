@@ -4,9 +4,9 @@ let longitude = 0;
 function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        (position) => {
-            latitude = position.coords.latitude;
-            longitude = position.coords.longitude;
+        (_position) => {
+            latitude = _position.coords.latitude;
+            longitude = _position.coords.longitude;
             fetchMeteoApi(latitude, longitude);
             console.log(latitude);
             console.log(longitude);
