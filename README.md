@@ -8,7 +8,7 @@ HTML
 CSS
 JS
 
-Les différentes fonctionalités misent en place sont les suivantes : 
+Les différentes fonctionalités mises en place sont les suivantes : 
 - Affichage de la date et de l'heure mise à jour automatiquement toutes les secondes.
 - Affichage des données météo lié à l'appel d'une API météo et d'une API de géolocalisation.
 - Mise à jour du back-ground au rafraîchissement de la page.
